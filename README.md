@@ -11,12 +11,17 @@
 - ### I am proficient problem solver and tech enthusiastic. I would love to be a Software Engineer where I can provide significant contribution with high learning curve.
 
 ```
+#include<bits/stdc++.h>
+using namespace std;
+
 class Fenil {
 
-  string name = "Fenil Milankumar Parmar";
-  string emailId = "fenil.cad@gmail.com";
-  string university = "Dalhousie University, Halifax, NS, Canada";
-  vector<string> skiils;
+  private: 
+    string name = "Fenil Milankumar Parmar";
+    string emailId = "fenil.cad@gmail.com";
+    string university = "Dalhousie University, Halifax, NS, Canada";
+  public:  
+    vector<string> skills;
 
   Fenil() {
     skills.push_back("Software Engineering");
@@ -40,16 +45,18 @@ class Fenil {
 
   string careerGoal() {
     priority_queue<string> careerGoal;
-    carrerGoal.push("Software Engineering using Java, C++, Python");
-    carrerGoal.push("Web Developer using MERN Stack and Cloud Technologies");
-    carrerGoal.push("Machine Learning and Data Science");
-    return careerGoal.pop();
+    careerGoal.push("Software Engineering using Java, C++, Python");
+    careerGoal.push("Web Developer using MERN Stack and Cloud Technologies");
+    careerGoal.push("Machine Learning and Data Science");
+    return careerGoal.top();
   }
 }; 
 
 int main(){
   Fenil hireFenil;
+  return 0;
 }
+
 ```
 ---
 ## 🧐 About
