@@ -1,9 +1,46 @@
-
-
 # <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Hi.gif" width="29px"> Hello world!&nbsp;<img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Earth.gif" width="24px">
 
 
 ### I'm Fenil Parmar, Master's in Applied Computer Science Student at 👨‍💻 Dalhousie University, Nova Scotia, Canada. I am proficient problem solver and tech enthusiastic. I would love to be a Software Engineer where I can provide significant contribution with high learning curve.
+```
+class Fenil {
+
+  string name = "Fenil Milankumar Parmar";
+  string emailId = "fenil.cad@gmail.com";
+  string university = "Dalhousie University, Halifax, NS, Canada";
+  vector<string> skiils;
+
+  Fenil() {
+    skills.push_back("Software Engineering");
+    skills.push_back("Problem Solving");
+    skills.push_back("Cloud Computing");
+    skills.push_back("Web Development");
+  }
+
+  map<string, string> profileInfo() {
+    map<string, string> info;
+    info["name"] = name;
+    info["emailId"] = emailId;
+    info["university"] = university;
+    return info;
+  }
+
+  vector<string> preferredProgrammingLanguages() {
+    vector<string> languages = "C++, Java, Python, JavaScript";
+    return languages;
+  }
+
+  string careerGoal() {
+    priority_queue<string> careerGoal;
+    carrerGoal.push("Software Engineering using Java, C++, Python");
+    carrerGoal.push("Web Developer using MERN Stack and Cloud Technologies");
+    carrerGoal.push("Machine Learning and Data Science");
+    return careerGoal.pop();
+  }
+};
+   
+   
+```
 -------
 
 [![Linkedin Badge](https://img.shields.io/badge/-FenilParmar-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/fenilparmar/)](https://www.linkedin.com/in/fenilparmar/) 
