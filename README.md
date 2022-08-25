@@ -37,9 +37,7 @@ class Fenil {
     carrerGoal.push("Machine Learning and Data Science");
     return careerGoal.pop();
   }
-};
-   
-   
+}; 
 ```
 -------
 
