@@ -21,4 +21,13 @@
 - 😄 Pronouns: He/Him
 - ⚡ Fun fact: I'm Nephophile, Person who love clouds ☁️, exploring beauty of Cumulonimbus, Cumulus , and Cirrus.
 
-![Fenil's github stats](https://github-readme-stats.vercel.app/api?username=11fenil11&show_icons=true)
+<!-- ![Fenil's github stats](https://github-readme-stats.vercel.app/api?username=11fenil11&show_icons=true)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=11fenil11&hide=php,Jupyter Notebook,html,glsl,shell,css&layout=compact)](https://github.com/anuraghazra/github-readme-stats) -->
+
+<a href="https://github.com/anuraghazra/github-readme-stats">
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=11fenil11&show_icons=true" />
+</a>
+<a href="https://github.com/anuraghazra/convoychat">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=11fenil11&hide=php,jupyter%20notebook,html,glsl,shell,css&layout=compact&langs_count=10" />
+</a>
