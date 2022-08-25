@@ -14,7 +14,7 @@ class Fenil {
     skills.push_back("Software Engineering");
     skills.push_back("Problem Solving");
     skills.push_back("Cloud Computing");
-    skills.push_back("Web Development");
+    skills.push_back("Web Development");    
   }
 
   map<string, string> profileInfo() {
@@ -26,7 +26,7 @@ class Fenil {
   }
 
   vector<string> preferredProgrammingLanguages() {
-    vector<string> languages = "C++, Java, Python, JavaScript";
+    vector<string> languages {"C++", "Java", "Python", "JavaScript"};
     return languages;
   }
 
@@ -38,6 +38,10 @@ class Fenil {
     return careerGoal.pop();
   }
 }; 
+
+int main(){
+  Fenil hireFenil;
+}
 ```
 -------
 
