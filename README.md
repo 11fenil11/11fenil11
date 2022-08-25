@@ -1,10 +1,10 @@
 ### Hi there 👋
-# Saksham Taneja 👨‍💻
+# Fenil Parmar 👨‍💻
 
-[![Linkedin Badge](https://img.shields.io/badge/-sakshamtaneja-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/fenilparmar/)](https://www.linkedin.com/in/fenilparmar/) 
-[![Leetcode](https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png)](https://leetcode.com/fenil_parmar/)
-[![GitHub followers](https://img.shields.io/github/followers/sakshamtaneja21?label=Follow&style=social)](https://github.com/11fenil11/?tab=follow)
-[![Gmail Badge](https://img.shields.io/badge/-sakshamtaneja7861@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:fenil.cad@gmail.com)](mailto:fenil.cad@gmail.com)
+[![Linkedin Badge](https://img.shields.io/badge/-FenilParmar-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/fenilparmar/)](https://www.linkedin.com/in/fenilparmar/) 
+[![Leetcode](https://img.shields.io/badge/-FenilParmar-blue?style=flat-square&logo=Leetcode&logoColor=white&link=https://www.linkedin.com/in/fenilparmar/)](https://leetcode.com/fenil_parmar/)
+[![GitHub followers](https://img.shields.io/github/followers/11Fenil11?label=Follow&style=social)](https://github.com/11fenil11/?tab=follow)
+[![Gmail Badge](https://img.shields.io/badge/-fenil.cad@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:fenil.cad@gmail.com)](mailto:fenil.cad@gmail.com)
 ---
 
 ## Hi there 👋,
