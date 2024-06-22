@@ -5,10 +5,7 @@
 [![GitHub followers](https://img.shields.io/github/followers/11Fenil11?label=Follow&style=social)](https://github.com/11fenil11/?tab=follow)
 [![Gmail Badge](https://img.shields.io/badge/-fenil.cad@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:fenil.cad@gmail.com)](mailto:fenil.cad@gmail.com)
 ---
-https://drive.google.com/file/d/1ZHF4rPTiDW_mACBtOehh48XJlO6RldWU/view?usp=drivesdk
-
-
-https://drive.google.com/file/d/18-frI_4Ozd9gUBg1CUBvhXnxFep9GKnv/view?usp=drivesdk
+https://docs.google.com/document/d/10wh5N-jmS0AA-75ydQ3_rCCy8hLJjFNHyo9zgRIVsHc/edit
 
 - ### I'm Fenil Parmar, Master's in Applied Computer Science Student at 👨‍💻 Dalhousie University, Nova Scotia, Canada. 
 - ### I am proficient problem solver and tech enthusiastic. I would love to be a Software Engineer where I can provide significant contribution with high learning curve.
