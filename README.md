@@ -8,6 +8,10 @@
 - ### I'm Fenil Parmar, Master's in Applied Computer Science Student at 👨‍💻 Dalhousie University, Nova Scotia, Canada. 
 - ### I am proficient problem solver and tech enthusiastic. I would love to be a Software Engineer where I can provide significant contribution with high learning curve.
 
+https://docs.google.com/document/d/1WJj_ArrFL9b6ubbGCGokxuucmeNyYYpoD2eW5WeFh-c/edit?usp=sharing
+https://drive.google.com/file/d/1CFtpb7LFAgGB-DdDILUJ3tsjQFZF1fWL/view?usp=sharing
+https://drive.google.com/file/d/1d2ai_-uonAaoxIhLBC9-PUfEqQKsVUBj/view?usp=sharing
+
 ```
 #include<bits/stdc++.h>
 using namespace std;
