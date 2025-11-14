@@ -8,7 +8,7 @@
 - ### I'm Fenil Parmar, Master's in Applied Computer Science Student at 👨‍💻 Dalhousie University, Nova Scotia, Canada. 
 - ### I am proficient problem solver and tech enthusiastic. I would love to be a Software Engineer where I can provide significant contribution with high learning curve.
 
-https://drive.google.com/file/d/1H9jU5kfmV_Ed-kQdDaunIqVmOWBG3gy0/view?usp=drivesdk
+
 
 ```
 #include<bits/stdc++.h>
