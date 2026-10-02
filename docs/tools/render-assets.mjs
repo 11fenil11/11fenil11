@@ -36,7 +36,7 @@ h1{font-size:86px;line-height:1;margin-top:34px;letter-spacing:-.02em;font-weigh
 h2{font-size:35px;font-weight:600;color:#9fd0bc;margin-top:16px}
 p{font-size:25px;line-height:1.4;color:#c8d0c9;margin-top:22px}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.chips span{font-size:16px;color:#dce7dd;border:1px solid rgba(240,244,238,.28);border-radius:8px;padding:8px 11px}
+.chips span{font-size:15px;color:#dce7dd;border:1px solid rgba(240,244,238,.28);border-radius:8px;padding:8px 10px}
 .photo{position:absolute;right:76px;top:96px;width:318px;height:318px;border-radius:18px;object-fit:cover;border:1px solid rgba(240,244,238,.25)}
 .side{position:absolute;right:76px;top:432px;width:318px;font-size:18px;line-height:1.55;color:#a3b4a8;text-align:center}
 .side b{color:#f7c870;font-weight:700}
@@ -46,8 +46,8 @@ p{font-size:25px;line-height:1.4;color:#c8d0c9;margin-top:22px}
   <div class="prompt mono"><b>fenil@toronto</b>:~$ ./hireFenil --role=senior-swe<span class="cursor"></span></div>
   <h1>Fenil Parmar</h1>
   <h2>Senior Cloud Software Engineer</h2>
-  <p>Secure, high-throughput cloud systems for finance, and the AI agents that help run them.</p>
-  <div class="chips mono"><span>AWS · GCP · Azure</span><span>Terraform</span><span>Distributed systems</span><span>Agentic AI</span></div>
+  <p>Secure, scalable distributed systems for finance, and the AI agents that help run them.</p>
+  <div class="chips mono"><span>Distributed systems</span><span>Platform engineering</span><span>Agentic AI</span><span>AWS · GCP · Azure</span></div>
 </div>
 <img class="photo" src="${photo}" alt="">
 <div class="side mono">Nasdaq Verafin · ex-TD Bank<br><b>3× award winner</b> · Toronto</div>

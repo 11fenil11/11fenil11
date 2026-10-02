@@ -49,6 +49,24 @@ body_class: home
   </ul>
 </section>
 
+<section class="section" id="strengths" aria-labelledby="strengths-title">
+  <div class="section-head">
+    <h2 id="strengths-title">// core strengths</h2>
+    <span class="meta">what I bring to senior, lead &amp; staff roles</span>
+  </div>
+  <div class="strengths">
+    {%- for s in site.data.strengths %}
+    <article class="strength">
+      <h3>{{ s.title }}</h3>
+      <p>{{ s.text }}</p>
+      <ul class="tags" aria-label="Keywords">
+        {%- for t in s.tags %}<li>{{ t }}</li>{% endfor -%}
+      </ul>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
 <section class="section" id="experience" aria-labelledby="experience-title">
   <div class="section-head">
     <h2 id="experience-title">// experience</h2>
@@ -93,16 +111,17 @@ body_class: home
 
 <section class="section" id="approach" aria-labelledby="approach-title">
   <div class="section-head">
-    <h2 id="approach-title">// engineering overview</h2>
+    <h2 id="approach-title">// how I build systems</h2>
+    <span class="meta">design → build → test → deploy → scale → operate</span>
   </div>
   <div class="overview">
     <div class="overview-copy">
       <p>{{ o.intro }}</p>
-      <ul class="principles">
-        {%- for pr in o.principles %}
-        <li><strong>{{ pr.title }}</strong><span>{{ pr.text }}</span></li>
+      <ol class="steps">
+        {%- for step in o.steps %}
+        <li><span class="step-num" aria-hidden="true">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span><div><strong>{{ step.title }}</strong><span class="step-text">{{ step.text }}</span></div></li>
         {%- endfor %}
-      </ul>
+      </ol>
     </div>
     <figure class="stack">
       <figcaption><span>// layers I build across</span><span>security wraps every layer</span></figcaption>
@@ -264,6 +283,14 @@ body_class: home
     <p class="cmd"><strong>{{ p.prompt_user }}@{{ p.prompt_host }}</strong>:~$ {{ p.contact.command }}</p>
     <h2 id="contact-title">{{ p.contact.heading }}</h2>
     <p>{{ p.contact.text }}</p>
+    {%- if p.contact.roles %}
+    <div class="roles">
+      <span class="roles-label">{{ p.contact.roles_label }}</span>
+      <ul>
+        {%- for r in p.contact.roles %}<li>{{ r }}</li>{% endfor -%}
+      </ul>
+    </div>
+    {%- endif %}
     <div class="links">
       <a class="btn primary" href="mailto:{{ p.email }}?subject=Hello%20Fenil">{% include icon.html name="mail" %}{{ p.email }}</a>
       <button class="btn copy-email" type="button" data-email="{{ p.email }}">{% include icon.html name="copy" %}<span aria-live="polite">Copy email</span></button>

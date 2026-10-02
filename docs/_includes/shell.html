@@ -5,6 +5,7 @@
 <header class="shell">
   <a class="prompt" href="{{ home }}" aria-label="{{ p.name }}, home"><strong>{{ p.prompt_user }}@{{ p.prompt_host }}</strong>:<span class="tilde">~</span>$ {{ cmd_first }}<span class="prompt-args">{{ cmd_rest }}</span><span class="cursor" aria-hidden="true"></span></a>
   <nav class="nav" aria-label="Main">
+    <a href="{{ home }}#strengths">Strengths</a>
     <a href="{{ home }}#experience">Experience</a>
     <a href="{{ home }}#work">Work</a>
     <a href="{{ '/projects/' | relative_url }}"{% if page.url == '/projects/' %} aria-current="page"{% endif %}>Projects</a>

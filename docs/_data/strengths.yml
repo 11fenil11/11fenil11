@@ -1,0 +1,42 @@
+# "Core strengths" on the home page: one plain sentence each, with the keywords recruiters search for as tags.
+# Every line is backed by real work or projects; keep it high level (no client names or metrics).
+
+- title: Distributed systems design
+  text: I split big problems into services that talk through APIs and events, keep data in sync across servers, and stay correct when many requests arrive at once.
+  tags: [System design, Microservices, Event-driven (SNS · SQS), Concurrency control, Data consistency]
+
+- title: Scaling & load balancing
+  text: When traffic grows, I scale out instead of up. Load balancers with TLS sit in front, more parallel workers run behind, and I tune concurrency until throughput hits the target.
+  tags: [Load balancing, TLS termination, Horizontal scaling, Concurrency tuning, High throughput]
+
+- title: Cloud & multi-region architecture
+  text: I design on AWS, Google Cloud and Azure, from serverless functions to Kubernetes clusters, and deploy across regions with encryption keys replicated where the workload runs.
+  tags: [AWS, Google Cloud, Azure, Serverless, Kubernetes, Multi-region]
+
+- title: Platform engineering & IaC
+  text: I turn infrastructure into reusable Terraform modules and pipelines that other teams build on, so environments stay consistent, drift stays low and reviews move faster.
+  tags: [Terraform, Infrastructure as code, Reusable modules, Kubernetes (AKS · GKE), Environment parity]
+
+- title: Agentic AI & LLM systems
+  text: I build multi-agent LLM systems in which specialized agents gather context from enterprise tools, hand work to each other and finish slow manual tasks like case triage much faster.
+  tags: [Multi-agent orchestration, Agentic workflows, Amazon Bedrock, Tool connectors, FastAPI]
+
+- title: Data pipelines at scale
+  text: I process large datasets with Spark and serverless pipelines, and replace slow manual analysis with automated reports that are auditable and free of personal data.
+  tags: [Apache Spark, Athena · S3 · Parquet, Serverless pipelines, Data validation, PII-safe]
+
+- title: Testing & safe delivery
+  text: I automate tests and data checks, use CI/CD to move changes from dev to staging to production, and plan risky cutovers so customers aren't affected.
+  tags: [Automated testing, CI/CD, GitHub Actions, Jenkins, Release automation]
+
+- title: Security & compliance
+  text: I build security in from the first design, with least-privilege access, KMS encryption, TLS, secretless workload identity and patched dependencies, and keep outputs auditable for regulated finance.
+  tags: [Least-privilege IAM, KMS, TLS, Workload identity, Vulnerability remediation, Compliance]
+
+- title: Reliability & operations
+  text: I watch production through Datadog and Splunk, support it hands-on, and use AI agents to take the first pass at incident and support triage.
+  tags: [Observability, Datadog, Splunk, Production support, Incident response]
+
+- title: Technical leadership
+  text: I lead cross-functional work from idea to production, mentor developers, raise the bar on code reviews, partner with architecture, database and security teams, and present to rooms of 100+ engineers.
+  tags: [Technical leadership, Mentoring, Code review, Cross-team collaboration, Tech talks]

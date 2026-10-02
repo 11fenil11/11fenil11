@@ -14,7 +14,8 @@ Every word on the site comes from `_data/`. Edit a file on github.com, commit, a
 
 | File | What it controls |
 | --- | --- |
-| `profile.yml` | Name, headline, intro, links, the "open to roles" badge, stats, contact section |
+| `profile.yml` | Name, headline, intro, links, the "open to roles" badge, stats, contact section and target roles, search keywords |
+| `strengths.yml` | "Core strengths": one plain sentence per capability, with keyword tags |
 | `experience.yml` | Work history, kept high level on purpose (no resume bullets, metrics or client names) |
 | `education.yml` | Degrees |
 | `projects.yml` | Project cards. `placement: featured` or `selected` puts a project on the home page |
@@ -22,7 +23,7 @@ Every word on the site comes from `_data/`. Edit a file on github.com, commit, a
 | `awards.yml` | Awards, hackathons and competitions |
 | `timeline.yml` | Dated highlights (supports `**bold**`) |
 | `skills.yml` | Toolbox |
-| `overview.yml` | The "engineering overview" principles and stack diagram |
+| `overview.yml` | "How I build systems": the design-to-operate steps and the stack diagram |
 
 Common changes:
 

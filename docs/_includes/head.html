@@ -70,7 +70,7 @@
     {{ l.url | jsonify }}{% unless forloop.last %},{% endunless %}
     {%- endfor %}
   ],
-  "knowsAbout": ["Cloud infrastructure", "Infrastructure as code", "Terraform", "Amazon Web Services", "Google Cloud", "Microsoft Azure", "Distributed systems", "Apache Spark", "Agentic AI", "Python", "Java", "Kubernetes"]
+  "knowsAbout": {{ p.knows_about | jsonify }}
 }
 </script>
 {%- endif %}

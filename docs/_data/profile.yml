@@ -18,7 +18,7 @@ prompt_command: ./hireFenil --role=senior-swe
 # Set show: false to hide the availability badge.
 availability:
   show: true
-  text: Open to senior & staff roles
+  text: Open to senior, lead & staff roles
 
 links:
   - label: Email
@@ -34,30 +34,34 @@ links:
     url: "https://leetcode.com/fenil_parmar/"
     icon: leetcode
 
-kicker: "// cloud infrastructure · distributed systems · agentic AI"
-headline: Secure, high-throughput cloud systems for finance — and the AI agents that help run them.
+kicker: "// distributed systems · cloud & platform engineering · agentic AI"
+headline: Secure, scalable distributed systems for finance, and the AI agents that help run them.
 lead:
-  - "I'm a senior software engineer with 5+ years in FinTech and enterprise banking. I design cloud infrastructure as code, scale data-intensive pipelines, and replace slow manual workflows with automated, auditable systems."
-  - "At Nasdaq Verafin I work on cloud infrastructure and agentic-AI automation for financial-crime detection; before that I built multi-cloud platform tooling at TD Bank. I lead greenfield proofs of concept end to end, mentor developers, and present to engineering audiences of 100+."
-  - "Off the keyboard: hackathons, competitive programming and mountain trails. Self-confessed nephophile — I like my clouds on AWS and over a ridge line."
+  - "I'm a senior software engineer with 5+ years in FinTech and enterprise banking, now at Nasdaq Verafin and before that at TD Bank. I design distributed systems and cloud platforms on AWS, Google Cloud and Azure, define them as code, scale them with load balancing and concurrency tuning, and ship them through automated tests and CI/CD."
+  - "I also build agentic AI: multi-agent LLM systems that take slow, manual work like support triage and incident response off people's plates. I lead proofs of concept end to end, mentor developers, raise the bar on code reviews, and present to engineering audiences of 100+."
+  - "Off the keyboard: hackathons, competitive programming and mountain trails. Self-confessed nephophile: I like my clouds on AWS and over a ridge line."
 
 focus:
-  - label: AWS · GCP · Azure
-    tone: green
-  - label: Terraform & IaC
-    tone: blue
   - label: Distributed systems
     tone: gold
-  - label: Agentic AI & LLMs
+  - label: AWS · GCP · Azure
     tone: green
-  - label: Python · Java
+  - label: Platform engineering
     tone: blue
-  - label: Security by design
+  - label: Terraform & IaC
     tone: gold
+  - label: Kubernetes
+    tone: green
+  - label: Agentic AI & LLMs
+    tone: blue
+  - label: CI/CD & testing
+    tone: gold
+  - label: Security by design
+    tone: green
 
 stats:
   - value: "5+"
-    label: years building production cloud systems
+    label: years building production cloud & distributed systems
   - value: "3×"
     label: award winner across hackathons & cybersecurity
   - value: Top 5%
@@ -69,5 +73,35 @@ stats:
 
 contact:
   command: echo "let's talk" | mail fenil.cad@gmail.com
-  heading: Hiring for a senior cloud, platform or backend role?
+  heading: Hiring a senior, lead or staff engineer for cloud, platform or AI infrastructure?
   text: I'd love to hear about teams where infrastructure, data and AI meet. Email is the fastest way to reach me.
+  roles_label: Roles I'm a strong fit for
+  roles:
+    - Senior Software Engineer (SWE III)
+    - Lead, Staff or Principal Engineer
+    - Senior Cloud Engineer
+    - Platform Engineer
+    - AI Infrastructure Engineer
+
+# Topics search engines read from the page's structured data (JSON-LD).
+knows_about:
+  - Distributed systems
+  - System design
+  - Cloud architecture
+  - Platform engineering
+  - Infrastructure as code
+  - Terraform
+  - Kubernetes
+  - Load balancing
+  - Scalability
+  - CI/CD
+  - Agentic AI
+  - Multi-agent systems
+  - Large language models
+  - Amazon Bedrock
+  - Apache Spark
+  - Amazon Web Services
+  - Google Cloud
+  - Microsoft Azure
+  - Python
+  - Java

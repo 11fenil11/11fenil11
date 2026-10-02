@@ -1,35 +1,43 @@
-# The "engineering overview" section: principles on the left, a layered stack diagram on the right.
+# "How I build systems": the delivery loop on the left, a layered stack diagram on the right.
 
-intro: My work sits where cloud infrastructure, data-intensive systems and applied AI meet. I care about systems that are secure by default, cheap to change and easy to audit.
+intro: This is how I take a system from the first diagram to production traffic.
 
-principles:
-  - title: Infrastructure is code
-    text: Reusable, reviewed Terraform modules that keep environments, clouds and regions consistent.
-  - title: Secure by default
-    text: Least-privilege IAM, encryption and TLS designed in from day one, not bolted on later.
-  - title: Automate the toil
-    text: Slow, manual, error-prone processes rebuilt as automated, auditable pipelines.
-  - title: Prove it fast
-    text: Greenfield proofs of concept taken end to end, from infrastructure to the demo.
+steps:
+  - title: Design
+    text: Start from the requirements and the expected load. Sketch the services, data flows and security boundaries, then choose the simplest architecture that will scale.
+  - title: Build
+    text: Write the infrastructure as reusable Terraform and the services in Python or Java, with clean APIs and least-privilege access from day one.
+  - title: Test
+    text: Automate unit, integration and data-validation checks so problems surface in the pipeline, not in production.
+  - title: Deploy
+    text: Ship through CI/CD, promote from dev to staging to production, and roll out across regions with planned, low-risk cutovers.
+  - title: Scale
+    text: Put load balancing and TLS in front, scale out horizontally, and tune concurrency and fan-out until throughput meets the target.
+  - title: Operate
+    text: Watch dashboards and logs, support production, and let AI agents take the first pass at triage.
 
 layers:
   - verb: automate
     name: Agentic AI & automation
     tone: gold
-    items: [LLM agents, Amazon Bedrock, FastAPI services, Workflow automation]
+    items: [Multi-agent LLMs, Amazon Bedrock, Tool connectors, FastAPI services, Triage automation]
+  - verb: serve
+    name: Services & APIs
+    tone: red
+    items: [REST APIs, Microservices, Spring Boot · FastAPI, Event-driven (SNS · SQS), Load balancing · TLS]
   - verb: scale
     name: Data & distributed processing
     tone: blue
-    items: [Apache Spark, Serverless fan-out, Athena · S3 · Parquet, Search services]
+    items: [Apache Spark, Serverless fan-out, Athena · S3 · Parquet, Search services, Data sync]
   - verb: ship
     name: Platform & delivery
     tone: green
-    items: [Kubernetes (AKS · GKE), Docker, GitHub Actions, Jenkins]
+    items: [Kubernetes (AKS · GKE), Docker, GitHub Actions · Jenkins, Automated testing, Datadog · Splunk]
   - verb: codify
     name: Cloud foundations as code
     tone: ink
-    items: [Terraform modules, AWS, Google Cloud, Azure, Multi-region]
+    items: [Terraform modules, AWS · GCP · Azure, Multi-region, IAM · KMS]
 
 rail:
   name: Security & compliance
-  items: [Least-privilege IAM, KMS encryption, TLS everywhere, PII-safe reporting, Audit trails]
+  items: [Least-privilege IAM, KMS encryption, TLS in transit, Secretless workload identity, Patched dependencies, PII-safe reporting, Audit trails]
