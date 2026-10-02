@@ -1,0 +1,73 @@
+# Who you are. Everything on the hero, contact card and contact section comes from here.
+
+name: Fenil Parmar
+title: Senior Cloud Software Engineer
+role: Senior Software Developer, Cloud & IaC
+company: Nasdaq
+location: Toronto, Ontario, Canada
+location_short: Toronto, Canada
+email: fenil.cad@gmail.com
+photo: /assets/img/fenil.jpg
+photo_alt: Fenil looking out over a sea of clouds from a mountain viewpoint
+
+# Terminal bar prompt: <user>@<host>:~$ <command>
+prompt_user: fenil
+prompt_host: toronto
+prompt_command: ./hireFenil --role=senior-swe
+
+# Set show: false to hide the availability badge.
+availability:
+  show: true
+  text: Open to senior & staff roles
+
+links:
+  - label: Email
+    url: "mailto:fenil.cad@gmail.com"
+    icon: mail
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/fenilparmar/"
+    icon: linkedin
+  - label: GitHub
+    url: "https://github.com/11fenil11"
+    icon: github
+  - label: LeetCode
+    url: "https://leetcode.com/fenil_parmar/"
+    icon: leetcode
+
+kicker: "// cloud infrastructure · distributed systems · agentic AI"
+headline: Secure, high-throughput cloud systems for finance — and the AI agents that help run them.
+lead:
+  - "I'm a senior software engineer with 5+ years in FinTech and enterprise banking. I design cloud infrastructure as code, scale data-intensive pipelines, and replace slow manual workflows with automated, auditable systems."
+  - "At Nasdaq Verafin I work on cloud infrastructure and agentic-AI automation for financial-crime detection; before that I built multi-cloud platform tooling at TD Bank. I lead greenfield proofs of concept end to end, mentor developers, and present to engineering audiences of 100+."
+  - "Off the keyboard: hackathons, competitive programming and mountain trails. Self-confessed nephophile — I like my clouds on AWS and over a ridge line."
+
+focus:
+  - label: AWS · GCP · Azure
+    tone: green
+  - label: Terraform & IaC
+    tone: blue
+  - label: Distributed systems
+    tone: gold
+  - label: Agentic AI & LLMs
+    tone: green
+  - label: Python · Java
+    tone: blue
+  - label: Security by design
+    tone: gold
+
+stats:
+  - value: "5+"
+    label: years building production cloud systems
+  - value: "3×"
+    label: award winner across hackathons & cybersecurity
+  - value: Top 5%
+    label: Facebook Hacker Cup, 34,000+ competitors
+  - value: "500+"
+    label: data-structure & algorithm problems solved
+  - value: "4.13"
+    label: Master's GPA (of 4.30), Dalhousie
+
+contact:
+  command: echo "let's talk" | mail fenil.cad@gmail.com
+  heading: Hiring for a senior cloud, platform or backend role?
+  text: I'd love to hear about teams where infrastructure, data and AI meet. Email is the fastest way to reach me.

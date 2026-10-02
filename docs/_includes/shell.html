@@ -1,0 +1,16 @@
+{%- assign p = site.data.profile -%}
+{%- assign home = '/' | relative_url -%}
+{%- assign cmd_first = p.prompt_command | split: ' ' | first -%}
+{%- assign cmd_rest = p.prompt_command | remove_first: cmd_first -%}
+<header class="shell">
+  <a class="prompt" href="{{ home }}" aria-label="{{ p.name }}, home"><strong>{{ p.prompt_user }}@{{ p.prompt_host }}</strong>:<span class="tilde">~</span>$ {{ cmd_first }}<span class="prompt-args">{{ cmd_rest }}</span><span class="cursor" aria-hidden="true"></span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="{{ home }}#experience">Experience</a>
+    <a href="{{ home }}#work">Work</a>
+    <a href="{{ '/projects/' | relative_url }}"{% if page.url == '/projects/' %} aria-current="page"{% endif %}>Projects</a>
+    <a href="{{ home }}#awards">Awards</a>
+    <a href="{{ home }}#skills">Skills</a>
+    <a href="{{ home }}#contact">Contact</a>
+  </nav>
+  <button class="theme-toggle" type="button" aria-label="Switch theme">{% include icon.html name="moon" class="i-moon" %}{% include icon.html name="sun" class="i-sun" %}</button>
+</header>

@@ -1,0 +1,19 @@
+---
+layout: default
+title: Page not found
+permalink: /404.html
+sitemap: false
+---
+{%- assign p = site.data.profile -%}
+<section class="notfound">
+  <div class="term">
+    <span class="cmd">$ cd ./that-page</span>
+    <h1>404 · No such file or directory</h1>
+    <span>That page doesn't exist, but the rest of the portfolio does.</span>
+  </div>
+  <div class="links">
+    <a class="btn" href="{{ '/' | relative_url }}">{% include icon.html name="home" %}Home</a>
+    <a class="btn" href="{{ '/projects/' | relative_url }}">{% include icon.html name="code" %}Projects</a>
+    <a class="btn" href="mailto:{{ p.email }}">{% include icon.html name="mail" %}Email {{ p.name | split: ' ' | first }}</a>
+  </div>
+</section>

@@ -1,0 +1,321 @@
+# Projects shown on the home page and /projects/.
+#   categories: any of cloud, ai, fullstack, systems (drives the filter tabs)
+#   placement:  featured (top three cards on the home page), selected (next cards on the home page),
+#               or leave it out to list the project only on /projects/
+#   terminal:   optional lines for the dark "terminal" panel on home-page cards
+
+- id: pagerbuddy
+  name: PagerBuddy
+  year: "2026"
+  context: AMEA Regional Hackathon · Hackers' Choice Award
+  categories: [ai]
+  placement: featured
+  badge: Award winner
+  summary: An agentic-AI assistant for incident response, built during a regional hackathon and awarded the Hackers' Choice Award.
+  stack: [Agentic AI, LLMs, Incident response]
+  note: Hackathon build · code not public
+  terminal:
+    - "$ pagerbuddy --incident"
+    - "agentic AI · incident response"
+    - "hackers' choice award · 2026"
+
+- id: cloudbnb
+  name: CloudBnB
+  year: "2022"
+  context: Dalhousie · graduate team project
+  categories: [cloud, ai]
+  placement: featured
+  badge: Serverless · multi-cloud
+  summary: A serverless, multi-cloud bed-and-breakfast platform. Bookings, food orders and tours run on AWS, while Google Cloud ML services recommend tour packages and score guest feedback.
+  highlights:
+    - Lambda and API Gateway microservices over DynamoDB for rooms, orders, tours and feedback
+    - Amazon Lex chatbots for booking, food ordering and site navigation
+    - Vertex AI tour-package prediction (my module) and Cloud Natural Language sentiment analysis
+    - Multi-factor sign-in with a security-question and cipher challenge
+  stack: [AWS Lambda, API Gateway, DynamoDB, Amazon Lex, Vertex AI, Cloud Functions, React]
+  terminal:
+    - "$ deploy cloudbnb"
+    - "aws: lambda · lex · dynamodb"
+    - "gcp: vertex ai · natural language"
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/CloudBnB
+
+- id: daldbms
+  name: DalDBMS
+  year: "2022"
+  context: Dalhousie · graduate team project
+  categories: [systems, cloud]
+  placement: featured
+  badge: Database internals
+  summary: A database engine written from scratch in Java, with SQL parsing and execution, lock-based transactions, and storage distributed across two Google Cloud VMs.
+  highlights:
+    - Query processor for CREATE, USE, INSERT, SELECT, UPDATE and DELETE
+    - Transaction manager with shared and exclusive locks for concurrency control
+    - Query, event and analytics logs; ERD reverse-engineering and SQL dump export
+    - Login with hashed credentials
+  stack: [Java, Maven, Google Compute Engine, Concurrency control]
+  terminal:
+    - "$ daldbms --nodes=2"
+    - "sql → parse → lock → commit"
+    - "java · transactions · gcp vms"
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/DalDBMS
+
+- id: pixplore
+  name: Pixplore
+  year: "2022"
+  context: Dalhousie · graduate project
+  categories: [cloud, fullstack]
+  placement: selected
+  badge: AWS · IaC
+  summary: An interest-driven photo-sharing app on AWS whose backend is provisioned entirely as code, with authentication, storage, data and compute defined in CloudFormation.
+  highlights:
+    - Cognito sign-up and sign-in with Amplify UI in a React front end
+    - A dozen Lambda functions for feeds, interests, profiles, uploads and saved posts
+    - CloudFormation templates for Cognito, IAM, Lambda, six DynamoDB tables, S3 and EC2
+  stack: [AWS Lambda, Cognito, DynamoDB, S3, CloudFormation, Amplify, React]
+  terminal:
+    - "$ aws cloudformation deploy"
+    - "cognito · lambda · dynamodb"
+    - "s3 · react + amplify"
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/Pixplore
+
+- id: plantone
+  name: PlantOne
+  year: "2022"
+  context: Dalhousie · graduate team project
+  categories: [fullstack]
+  placement: selected
+  badge: Full-stack · CI/CD
+  summary: A community and marketplace for plant lovers, with a Spring Boot REST API secured by JWT, a Vue.js front end, and separate testing and production pipelines.
+  highlights:
+    - Posts, blogs, events, comments, likes and a shopping cart behind JWT auth with password reset
+    - Module-level integration tests and Swagger-documented endpoints
+    - GitLab CI deploying testing and production environments, plus code-smell analysis
+  stack: [Java, Spring Boot, JWT, Vue.js, GitLab CI, Swagger]
+  terminal:
+    - "$ mvn verify && deploy prod"
+    - "spring boot · jwt · vue.js"
+    - "testing + prod pipelines"
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/plantOne
+
+- id: shareit
+  name: ShareIt
+  year: "2022"
+  context: Dalhousie · team of six
+  categories: [fullstack]
+  placement: selected
+  badge: MERN · real-time
+  summary: A community sharing platform on the MERN stack, with a social feed, item inventory, real-time chat, Stripe checkout and an admin dashboard. I built the user-profile and star-rating feedback modules.
+  stack: [MongoDB, Express, React, Node.js, Socket.IO, Stripe]
+  terminal:
+    - "$ npm start"
+    - "mern · socket.io chat"
+    - "stripe checkout"
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/ShareIt
+
+- id: wear-it-virtually
+  name: Wear It Virtually
+  year: "2020"
+  context: Computer-vision project
+  categories: [ai]
+  placement: selected
+  badge: Computer vision
+  summary: Deep-learning virtual try-on. Send a photo and a garment, and the pipeline parses the body, estimates pose and renders you wearing it.
+  highlights:
+    - Human parsing (JPPNet) and pose estimation feed a VITON-style warping and refinement network
+    - Flask REST API that takes person and clothing images and returns the try-on render
+  stack: [Python, TensorFlow, OpenCV, Flask]
+  terminal:
+    - "$ POST /api/infer"
+    - "person.jpg + garment.jpg"
+    - "parse → pose → warp → render"
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/Wear-It-Virtually
+
+- id: investnow
+  name: InvestNow
+  year: "2022"
+  context: Dalhousie · team of six
+  categories: [fullstack]
+  badge: MERN
+  summary: A platform connecting startups with investors, with startup and investor search, chat, document verification, a knowledge hub, payments and notifications. I was the team's full-stack developer.
+  stack: [MongoDB, Express, React, Node.js, Heroku]
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/InvestNow
+
+- id: pubsub
+  name: Redis Pub/Sub Service
+  year: "2022"
+  context: Take-home coding challenge
+  categories: [systems]
+  badge: Event-driven
+  summary: A lightweight publisher–subscriber service in Node.js on Redis channels, with HTTP endpoints to subscribe to topics, publish events and read delivered messages.
+  stack: [Node.js, Redis, ioredis]
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/PublisherSubscriber
+
+- id: mind-guardian
+  name: The Mind Guardian
+  year: "2022"
+  context: Mental-health research project
+  categories: [ai]
+  badge: Applied ML
+  summary: A Flutter companion-app concept for mental-health monitoring, backed by ML research. Logistic regression led four models (~96% accuracy) on Twitter sentiment, and transfer learning drove MRI brain-tumour detection.
+  stack: [Flutter, Python, NLP, Transfer learning]
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/TheMindGuardian
+
+- id: black-friday
+  name: Black Friday Sales Prediction
+  year: "2023"
+  context: Dalhousie · team project
+  categories: [ai]
+  badge: Machine learning
+  summary: XGBoost, random-forest, decision-tree and linear models compared to predict per-product Black Friday purchases from customer demographics and product data.
+  stack: [Python, XGBoost, pandas, Jupyter]
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/Black-Friday-Sales-Prediction
+
+- id: covid-xray
+  name: COVID-19 Chest X-ray Classifier
+  year: "2020"
+  context: Personal project · Kaggle notebook
+  categories: [ai]
+  badge: Deep learning
+  summary: A convolutional neural network that classifies chest X-rays as COVID-19 positive or normal, trained on public datasets and served through a Flask web app.
+  stack: [Keras, CNN, OpenCV, Flask]
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/Covid19-Detection-Using-Chest-X-Ray
+    - label: Kaggle
+      url: https://www.kaggle.com/fusicfenta/covid-19-detection-using-chest-x-ray
+
+- id: fake-news
+  name: Fake News Detection
+  year: "2020"
+  context: Personal project
+  categories: [ai]
+  badge: NLP
+  summary: LSTM and CNN models over word embeddings that flag fake news, wrapped in a Dash web app packaged for Gunicorn deployment.
+  stack: [Python, LSTM, CNN, Dash]
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/Fake-News-Detection
+
+- id: traffic
+  name: Dynamic Traffic Signal
+  year: "2020"
+  context: Computer-vision prototype
+  categories: [ai]
+  badge: Computer vision
+  summary: Counts vehicles in traffic video with OpenCV Haar cascades, the input for adapting signal timings to real-time congestion.
+  stack: [Python, OpenCV]
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/Dynamic-Traffic-Singnal
+
+- id: contests
+  name: Contest Solutions Archive
+  year: 2020 – 2022
+  context: Kick Start · Code Jam · Hacker Cup · Codeforces · LeetCode
+  categories: [systems]
+  badge: Algorithms
+  summary: Solutions from Google Kick Start 2022 rounds, Code Jam 2021, Facebook Hacker Cup 2020, Codeforces and the 30-Day LeetCoding Challenge, mostly in C++.
+  stack: [C++, Java, Python]
+  links:
+    - label: Kick Start
+      url: https://github.com/11fenil11/Google-Kickstart
+    - label: Contests
+      url: https://github.com/11fenil11/Competitive-Programming
+    - label: LeetCoding
+      url: https://github.com/11fenil11/30-Day-LeetCoding-Challenge
+
+- id: genome-compression
+  name: Genome Sequence Compression
+  year: "2020"
+  context: Algorithms project
+  categories: [systems]
+  badge: Algorithms
+  summary: Shannon–Fano entropy coding implemented in C++ and applied to the COVID-19 genome sequence (FASTA) and to text, shrinking a sample file by about 42%.
+  stack: [C++, Entropy coding]
+  links:
+    - label: Genome
+      url: https://github.com/11fenil11/Covid-19-Sequence-Compression
+    - label: Shannon–Fano
+      url: https://github.com/11fenil11/Shannon-Fano-Data-Compression
+
+- id: smartsociety
+  name: SmartSociety
+  year: "2020"
+  context: Web application
+  categories: [fullstack]
+  badge: Web app
+  summary: A residential-society management portal with notices, events, lost and found, chat, a domestic-staff registry, OTP password reset and an admin dashboard.
+  stack: [PHP, MySQL, JavaScript]
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/SmartSociety
+
+- id: webi-grocers
+  name: Webi Grocers
+  year: "2020"
+  context: Web application
+  categories: [fullstack]
+  badge: Web app
+  summary: A web marketplace that brings local street vendors online, with doorstep delivery and digital or cash-on-delivery payments.
+  stack: [PHP, HTML, CSS]
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/Webi-Grocers
+
+- id: firststep
+  name: FirstStep Cleaning
+  year: "2020"
+  context: Business website
+  categories: [fullstack]
+  badge: Web app
+  summary: A website for a cleaning-services business in Australia, with service pages, offers, bookings, history and a customer dashboard.
+  stack: [PHP, MySQL, Bootstrap, JavaScript]
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/FirstStepCleaning
+
+- id: games
+  name: Pac-Man in C++ and a Java 2D game
+  year: "2020"
+  context: Games
+  categories: [systems]
+  badge: Games
+  summary: A Pac-Man clone in C++ with graphics.h and a 2D Java game with sprites, jumping and sound effects; early lessons in game loops and object-oriented design.
+  stack: [C++, Java]
+  links:
+    - label: Pac-Man
+      url: https://github.com/11fenil11/Pacman
+    - label: Java game
+      url: https://github.com/11fenil11/Game
+
+- id: algo-calculator
+  name: Algorithm Calculator
+  year: "2020"
+  context: Desktop app
+  categories: [systems]
+  badge: Algorithms
+  summary: A Java Swing desktop app that runs six sorting algorithms on any integer array and returns the result instantly.
+  stack: [Java, Swing]
+  links:
+    - label: Code
+      url: https://github.com/11fenil11/GUI-based-Algorithm-Calculator

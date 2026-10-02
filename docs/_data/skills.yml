@@ -1,0 +1,23 @@
+- group: Languages
+  items: [Python, Java, TypeScript, JavaScript, SQL, Bash, C++]
+
+- group: Cloud
+  items: [AWS, Google Cloud, Azure, Lambda, S3, Athena, DynamoDB, KMS, SNS / SQS, Bedrock, IAM]
+
+- group: Infrastructure & delivery
+  items: [Terraform, Docker, Kubernetes (AKS · GKE), GitHub Actions, Jenkins, Linux]
+
+- group: Data & distributed systems
+  items: [Apache Spark, Parquet, Elasticsearch, MongoDB, Redis, SQL databases]
+
+- group: AI & ML
+  items: [LLM agents, Amazon Bedrock, Vertex AI, TensorFlow · Keras, OpenCV, XGBoost]
+
+- group: Backend & web
+  items: [Spring Boot, FastAPI, Node.js · Express, Flask, React, Vue.js, REST APIs]
+
+- group: Reliability & security
+  items: [Datadog, Splunk, Least-privilege IAM, KMS encryption, SSL / TLS, Multi-region design]
+
+- group: Ways of working
+  items: [System design, Code review culture, Mentoring, Technical talks, Agile delivery]

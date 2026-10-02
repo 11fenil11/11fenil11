@@ -1,0 +1,10 @@
+{%- assign pr = include.project -%}
+{%- if pr.links and pr.links.size > 0 -%}
+<div class="card-links">
+  {%- for l in pr.links %}
+  <a href="{{ l.url }}">{% if l.url contains 'github.com' %}{% include icon.html name="github" %}{% else %}{% include icon.html name="external" %}{% endif %}{{ l.label }}<span class="visually-hidden"> for {{ pr.name }}</span></a>
+  {%- endfor %}
+</div>
+{%- elsif pr.note -%}
+<p class="note">{{ pr.note }}</p>
+{%- endif -%}

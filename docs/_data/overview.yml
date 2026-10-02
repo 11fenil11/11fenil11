@@ -1,0 +1,35 @@
+# The "engineering overview" section: principles on the left, a layered stack diagram on the right.
+
+intro: My work sits where cloud infrastructure, data-intensive systems and applied AI meet. I care about systems that are secure by default, cheap to change and easy to audit.
+
+principles:
+  - title: Infrastructure is code
+    text: Reusable, reviewed Terraform modules that keep environments, clouds and regions consistent.
+  - title: Secure by default
+    text: Least-privilege IAM, encryption and TLS designed in from day one, not bolted on later.
+  - title: Automate the toil
+    text: Slow, manual, error-prone processes rebuilt as automated, auditable pipelines.
+  - title: Prove it fast
+    text: Greenfield proofs of concept taken end to end, from infrastructure to the demo.
+
+layers:
+  - verb: automate
+    name: Agentic AI & automation
+    tone: gold
+    items: [LLM agents, Amazon Bedrock, FastAPI services, Workflow automation]
+  - verb: scale
+    name: Data & distributed processing
+    tone: blue
+    items: [Apache Spark, Serverless fan-out, Athena · S3 · Parquet, Search services]
+  - verb: ship
+    name: Platform & delivery
+    tone: green
+    items: [Kubernetes (AKS · GKE), Docker, GitHub Actions, Jenkins]
+  - verb: codify
+    name: Cloud foundations as code
+    tone: ink
+    items: [Terraform modules, AWS, Google Cloud, Azure, Multi-region]
+
+rail:
+  name: Security & compliance
+  items: [Least-privilege IAM, KMS encryption, TLS everywhere, PII-safe reporting, Audit trails]

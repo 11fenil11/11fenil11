@@ -1,0 +1,10 @@
+# Filter tabs on /projects/. Each project lists one or more of these ids under `categories`.
+
+- id: cloud
+  label: Cloud & serverless
+- id: ai
+  label: AI & ML
+- id: fullstack
+  label: Full-stack
+- id: systems
+  label: Systems & algorithms

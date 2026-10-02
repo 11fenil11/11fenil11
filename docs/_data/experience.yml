@@ -1,0 +1,30 @@
+# Work history, kept deliberately high level (no resume bullets, metrics or client names).
+
+- company: Nasdaq
+  unit: Verafin
+  role: Senior Software Developer, Cloud & IaC
+  dates: Mar 2025 – Present
+  location: Toronto, ON
+  summary: Cloud infrastructure, data pipelines and agentic-AI automation for a financial-crime and fraud-detection platform serving enterprise banks. I lead greenfield proofs of concept end to end and build reusable, multi-region infrastructure with security and compliance designed in.
+  tags: [AWS, Terraform, Python, Spark, LLM agents, Serverless]
+
+- company: TD Bank
+  role: Software Engineer II, Cloud Platforms
+  dates: Jan 2023 – Mar 2025
+  location: Toronto, ON
+  summary: Platform engineering across Google Cloud and Azure — identity and access automation, secretless Kubernetes workload identity, CI/CD tooling and secure-by-default infrastructure as code used across large engineering teams.
+  tags: [GCP, Azure, Terraform, Kubernetes, GitHub Actions, Spring Boot]
+
+- company: Magnitude Software
+  role: Associate Software Engineer
+  dates: Feb – Nov 2021
+  location: Bengaluru, India
+  summary: Enterprise data-connectivity products — REST APIs and SQL-based connectors in C++ and Java, with automated test suites wired into CI pipelines.
+  tags: [C++, Java, SQL, Python, Azure DevOps]
+
+- company: AIM Technologies
+  role: Machine Learning Intern
+  dates: Jan – Jun 2020
+  location: Ahmedabad, India
+  summary: Early-stage AI startup — built a deep-learning virtual try-on prototype and led a small team shipping a conversational assistant on cloud services.
+  tags: [Python, TensorFlow, OpenCV, Amazon Lex, AWS]

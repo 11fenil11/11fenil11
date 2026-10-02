@@ -1,0 +1,56 @@
+---
+layout: default
+title: Projects
+description: Cloud, distributed-systems, AI and full-stack projects by Fenil Parmar, from hackathon wins to graduate work at Dalhousie and early experiments.
+permalink: /projects/
+---
+{%- assign p = site.data.profile -%}
+{%- assign all = site.data.projects -%}
+
+<section class="page-hero">
+  <p class="kicker">// projects</p>
+  <h1>Projects</h1>
+  <p>Cloud, distributed-systems, AI and full-stack work, from a 2026 hackathon win to graduate projects at Dalhousie and the experiments that started it all. Production work at Nasdaq and TD Bank is summarized on the <a href="{{ '/' | relative_url }}#experience">home page</a>.</p>
+</section>
+
+<div class="toolbar">
+  <a class="btn" href="{{ '/' | relative_url }}">{% include icon.html name="home" %}Home</a>
+  {%- for link in p.links %}
+  <a class="btn" href="{{ link.url }}"{% unless link.url contains 'mailto:' %} rel="me"{% endunless %}>{% include icon.html name=link.icon %}{{ link.label }}</a>
+  {%- endfor %}
+</div>
+
+<div class="filters" role="group" aria-label="Filter projects by area">
+  <button class="filter" type="button" data-filter="all" aria-pressed="true"><strong>{{ all.size }}</strong><span>All</span></button>
+  {%- for c in site.data.categories %}
+  {%- assign matches = all | where_exp: "item", "item.categories contains c.id" %}
+  <button class="filter" type="button" data-filter="{{ c.id }}" aria-pressed="false"><strong>{{ matches.size }}</strong><span>{{ c.label }}</span></button>
+  {%- endfor %}
+</div>
+<p class="result-count" aria-live="polite">Showing all {{ all.size }} projects</p>
+
+<h2 class="visually-hidden">Project list</h2>
+<div class="archive">
+  {%- for pr in all %}
+  <article class="card project" id="{{ pr.id }}" data-categories="{{ pr.categories | join: ' ' }}">
+    <div class="project-top">
+      <span class="label">{{ pr.badge }}</span>
+      <span class="when">{{ pr.year }}</span>
+    </div>
+    <h3>{{ pr.name }}</h3>
+    <p class="meta">{{ pr.context }}</p>
+    <p>{{ pr.summary }}</p>
+    {%- if pr.highlights %}
+    <ul class="highlights">
+      {%- for h in pr.highlights %}
+      <li>{{ h }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+    <ul class="tags" aria-label="Technologies">
+      {%- for t in pr.stack %}<li>{{ t }}</li>{% endfor -%}
+    </ul>
+    {% include project-links.html project=pr %}
+  </article>
+  {%- endfor %}
+</div>

@@ -1,0 +1,27 @@
+# Newest first. Text supports **bold** and [links](https://example.com).
+
+recent:
+  - when: "2026"
+    text: Won the **Hackers' Choice Award** at the AMEA Regional Hackathon with PagerBuddy, an agentic-AI incident-response assistant.
+  - when: Mar 2025
+    text: Joined **Nasdaq Verafin** as Senior Software Developer, Cloud & IaC, working on financial-crime detection.
+  - when: "2024"
+    text: Received the **Cyber Security Fortress Award**, an international award contested among the tech giants.
+  - when: "2024"
+    text: Showcased our TD TechJam-winning solution at **TechCon ’24**.
+  - when: "2023"
+    text: Won **TD TechJam 2023**, finishing 1st of 40+ teams across North America.
+  - when: Apr 2023
+    text: Completed a **Master of Applied Computer Science** at Dalhousie University with a 4.13 / 4.30 GPA.
+  - when: Jan 2023
+    text: Joined **TD Bank** as Software Engineer II, Cloud Platforms.
+
+earlier:
+  - when: "2022"
+    text: Built serverless and distributed systems at Dalhousie — CloudBnB, Pixplore and DalDBMS — and competed in Google Kick Start.
+  - when: Jan 2022
+    text: Started graduate studies at Dalhousie University in Halifax.
+  - when: "2021"
+    text: Started full-time at Magnitude Software in Bengaluru, graduated in Information Technology (CGPA 8.9) and competed in Google Code Jam.
+  - when: "2020"
+    text: Machine learning internship at AIM Technologies; built COVID-19 X-ray and fake-news detection models and competed in Facebook Hacker Cup.

@@ -1,0 +1,38 @@
+# Site settings. GitHub Pages builds this folder (Settings > Pages > Deploy from a branch > main, /docs).
+# Content lives in _data/*.yml; edit those files to update the site.
+
+title: Fenil Parmar
+tagline: Senior Cloud Software Engineer
+description: >-
+  Senior cloud software engineer in Toronto building secure, high-throughput systems for FinTech
+  and banking with AWS, Terraform, Python, Spark and agentic AI.
+lang: en-CA
+timezone: America/Toronto
+
+# Served at https://11fenil11.github.io/11fenil11/. If you move the site to a 11fenil11.github.io
+# repo or a custom domain, set baseurl to "" (and change url for a custom domain).
+url: "https://11fenil11.github.io"
+baseurl: "/11fenil11"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+
+plugins:
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - .jekyll-cache
+  - tools

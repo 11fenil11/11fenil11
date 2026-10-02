@@ -1,0 +1,277 @@
+---
+layout: default
+body_class: home
+---
+{%- assign p = site.data.profile -%}
+{%- assign o = site.data.overview -%}
+{%- assign projects_url = '/projects/' | relative_url -%}
+
+<section class="hero" id="about" aria-label="Profile">
+  <div class="identity">
+    <img class="portrait" src="{{ p.photo | relative_url }}" alt="{{ p.photo_alt }}" width="460" height="460" fetchpriority="high">
+    <div class="id-main">
+      <h1 class="name">{{ p.name }}</h1>
+      <p class="role">{{ p.role }}<span class="org">{{ p.company }}</span></p>
+      {%- if p.availability.show %}
+      <p class="status"><span class="dot" aria-hidden="true"></span>{{ p.availability.text }}</p>
+      {%- endif %}
+    </div>
+    <div class="links">
+      {%- for link in p.links %}
+      <a class="btn" href="{{ link.url }}"{% unless link.url contains 'mailto:' %} rel="me"{% endunless %}>{% include icon.html name=link.icon %}{{ link.label }}</a>
+      {%- endfor %}
+    </div>
+    <ul class="contact-list">
+      <li>{% include icon.html name="mail" %}<a href="mailto:{{ p.email }}">{{ p.email }}</a></li>
+      <li>{% include icon.html name="pin" %}<span>{{ p.location }}</span></li>
+    </ul>
+  </div>
+
+  <div class="intro">
+    <p class="kicker">{{ p.kicker }}</p>
+    <h2 class="headline">{{ p.headline }}</h2>
+    {%- for para in p.lead %}
+    <p class="lead{% if forloop.last %} personal{% endif %}">{{ para }}</p>
+    {%- endfor %}
+    <ul class="chips" aria-label="Focus areas">
+      {%- for f in p.focus %}
+      <li class="chip {{ f.tone }}">{{ f.label }}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section aria-label="At a glance">
+  <ul class="stats">
+    {%- for s in p.stats %}
+    <li class="stat"><strong>{{ s.value }}</strong><span>{{ s.label }}</span></li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="section" id="experience" aria-labelledby="experience-title">
+  <div class="section-head">
+    <h2 id="experience-title">// experience</h2>
+    <span class="meta">5+ years · FinTech &amp; enterprise banking</span>
+  </div>
+  <div class="grid two">
+    {%- for job in site.data.experience %}
+    <article class="card job">
+      <div class="job-head">
+        <h3>{{ job.company }}{% if job.unit %} <small>· {{ job.unit }}</small>{% endif %}</h3>
+        <span class="when">{{ job.dates }}</span>
+      </div>
+      <p class="position">{{ job.role }}</p>
+      <p class="meta">{{ job.location }}</p>
+      <p>{{ job.summary }}</p>
+      <ul class="tags" aria-label="Technologies">
+        {%- for t in job.tags %}<li>{{ t }}</li>{% endfor -%}
+      </ul>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section" id="education" aria-labelledby="education-title">
+  <div class="section-head">
+    <h2 id="education-title">// education</h2>
+  </div>
+  <div class="grid two">
+    {%- for e in site.data.education %}
+    <article class="card job">
+      <div class="job-head">
+        <h3>{{ e.school }}</h3>
+        <span class="when">{{ e.dates }}</span>
+      </div>
+      <p class="position">{{ e.degree }}</p>
+      <p class="meta">{{ e.location }}</p>
+      <p>{{ e.note }}</p>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section" id="approach" aria-labelledby="approach-title">
+  <div class="section-head">
+    <h2 id="approach-title">// engineering overview</h2>
+  </div>
+  <div class="overview">
+    <div class="overview-copy">
+      <p>{{ o.intro }}</p>
+      <ul class="principles">
+        {%- for pr in o.principles %}
+        <li><strong>{{ pr.title }}</strong><span>{{ pr.text }}</span></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <figure class="stack">
+      <figcaption><span>// layers I build across</span><span>security wraps every layer</span></figcaption>
+      <ol class="layers">
+        {%- for l in o.layers %}
+        <li class="layer" data-tone="{{ l.tone }}">
+          <div class="layer-head"><strong>{{ l.name }}</strong><span class="layer-verb">{{ l.verb }}</span></div>
+          <ul>
+            {%- for item in l.items %}<li>{{ item }}</li>{% endfor -%}
+          </ul>
+        </li>
+        {%- endfor %}
+      </ol>
+      <div class="rail">
+        <strong>{{ o.rail.name }}</strong>
+        <ul>
+          {%- for item in o.rail.items %}<li>{{ item }}</li>{% endfor -%}
+        </ul>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="work" aria-labelledby="work-title">
+  <div class="section-head">
+    <h2 id="work-title">// featured work</h2>
+    <a class="section-link" href="{{ projects_url }}">all projects {% include icon.html name="arrow" %}</a>
+  </div>
+  <div class="systems">
+    {%- assign featured = site.data.projects | where: "placement", "featured" -%}
+    {%- for pr in featured %}
+    <article class="system">
+      <div class="term" aria-hidden="true">
+        <span class="badge gold">{{ pr.badge }}</span>
+        {%- for line in pr.terminal %}
+        {%- if forloop.first %}
+        <span class="cmd">{{ line }}</span>
+        <strong>{{ pr.name | upcase }}</strong>
+        {%- else %}
+        <span>{{ line }}</span>
+        {%- endif %}
+        {%- endfor %}
+      </div>
+      <div class="system-body">
+        <h3>{{ pr.name }}</h3>
+        <p class="meta">{{ pr.context }} · {{ pr.year }}</p>
+        <p>{{ pr.summary }}</p>
+        <ul class="tags" aria-label="Technologies">
+          {%- for t in pr.stack limit: 4 %}<li>{{ t }}</li>{% endfor -%}
+        </ul>
+        {% include project-links.html project=pr %}
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section" id="projects" aria-labelledby="projects-title">
+  <div class="section-head">
+    <h2 id="projects-title">// selected projects</h2>
+    <a class="section-link" href="{{ projects_url }}">view all {{ site.data.projects.size }} projects {% include icon.html name="arrow" %}</a>
+  </div>
+  <div class="papers">
+    {%- assign selected = site.data.projects | where: "placement", "selected" -%}
+    {%- for pr in selected %}
+    <article class="paper">
+      <div class="term" aria-hidden="true">
+        <span class="badge {% cycle 'badges': 'blue', 'green', 'gold' %}">{{ pr.badge }}</span>
+        {%- for line in pr.terminal %}
+        {%- if forloop.first %}
+        <span class="cmd">{{ line }}</span>
+        <strong>{{ pr.name | upcase }}</strong>
+        {%- else %}
+        <span>{{ line }}</span>
+        {%- endif %}
+        {%- endfor %}
+      </div>
+      <div class="paper-body">
+        <h3>{{ pr.name }}</h3>
+        <p class="meta">{{ pr.context }} · {{ pr.year }}</p>
+        <p class="desc">{{ pr.summary }}</p>
+        {%- if pr.highlights %}
+        <ul class="highlights">
+          {%- for h in pr.highlights %}
+          <li>{{ h }}</li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+        <ul class="tags" aria-label="Technologies">
+          {%- for t in pr.stack %}<li>{{ t }}</li>{% endfor -%}
+        </ul>
+        {% include project-links.html project=pr %}
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section" id="awards" aria-labelledby="awards-title">
+  <div class="section-head">
+    <h2 id="awards-title">// awards, hackathons &amp; competitions</h2>
+  </div>
+  <div class="grid three">
+    {%- for a in site.data.awards %}
+    <article class="card award" data-tone="{{ a.tone }}">
+      <p class="result">
+        {%- case a.tone -%}
+          {%- when "gold" -%}{% include icon.html name="trophy" %}
+          {%- when "blue" -%}{% include icon.html name="rank" %}
+          {%- else -%}{% include icon.html name="star" %}
+        {%- endcase -%}
+        {{ a.result }}
+      </p>
+      <h3>{{ a.title }}</h3>
+      <p class="meta">{{ a.event }}{% if a.year %} · {{ a.year }}{% endif %}</p>
+      <p>{{ a.detail }}{% if a.url %} <a href="{{ a.url }}">See the solutions</a>.{% endif %}</p>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section" id="timeline" aria-labelledby="timeline-title">
+  <div class="section-head">
+    <h2 id="timeline-title">// timeline</h2>
+  </div>
+  <ul class="news">
+    {%- for n in site.data.timeline.recent %}
+    <li><span class="when">{{ n.when }}</span><span>{{ n.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span></li>
+    {%- endfor %}
+  </ul>
+  <details class="details">
+    <summary>Earlier: 2020 – 2022</summary>
+    <ul class="news">
+      {%- for n in site.data.timeline.earlier %}
+      <li><span class="when">{{ n.when }}</span><span>{{ n.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span></li>
+      {%- endfor %}
+    </ul>
+  </details>
+</section>
+
+<section class="section" id="skills" aria-labelledby="skills-title">
+  <div class="section-head">
+    <h2 id="skills-title">// toolbox</h2>
+  </div>
+  <div class="grid four toolbox">
+    {%- for g in site.data.skills %}
+    <article class="card">
+      <h3>{{ g.group }}</h3>
+      <ul class="pills">
+        {%- for item in g.items %}<li>{{ item }}</li>{% endfor -%}
+      </ul>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section" id="contact" aria-labelledby="contact-title">
+  <div class="cta">
+    <p class="cmd"><strong>{{ p.prompt_user }}@{{ p.prompt_host }}</strong>:~$ {{ p.contact.command }}</p>
+    <h2 id="contact-title">{{ p.contact.heading }}</h2>
+    <p>{{ p.contact.text }}</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:{{ p.email }}?subject=Hello%20Fenil">{% include icon.html name="mail" %}{{ p.email }}</a>
+      <button class="btn copy-email" type="button" data-email="{{ p.email }}">{% include icon.html name="copy" %}<span aria-live="polite">Copy email</span></button>
+      {%- for link in p.links %}
+      {%- unless link.url contains 'mailto:' %}
+      <a class="btn" href="{{ link.url }}" rel="me">{% include icon.html name=link.icon %}{{ link.label }}</a>
+      {%- endunless %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,76 @@
+{%- assign p = site.data.profile -%}
+{%- if page.title -%}
+  {%- assign page_title = page.title | append: " · " | append: p.name -%}
+{%- else -%}
+  {%- assign page_title = p.name | append: " · " | append: site.tagline -%}
+{%- endif -%}
+{%- assign page_desc = page.description | default: site.description | strip_newlines | strip -%}
+{%- assign social_image = '/assets/img/social-card.png' | absolute_url -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ page_desc | escape }}">
+<meta name="author" content="{{ p.name }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f5f6f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111513" media="(prefers-color-scheme: dark)">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="{{ p.name }}">
+<meta property="og:title" content="{{ page_title | escape }}">
+<meta property="og:description" content="{{ page_desc | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ social_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ p.name }}, {{ site.tagline }}">
+<meta property="og:locale" content="en_CA">
+<meta property="profile:first_name" content="Fenil">
+<meta property="profile:last_name" content="Parmar">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page_title | escape }}">
+<meta name="twitter:description" content="{{ page_desc | escape }}">
+<meta name="twitter:image" content="{{ social_image }}">
+
+<link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="icon" href="{{ '/assets/img/favicon-32.png' | relative_url }}" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+<script>
+  (function () {
+    var root = document.documentElement;
+    root.classList.add("js");
+    try {
+      var saved = localStorage.getItem("theme");
+      if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved);
+    } catch (e) {}
+  })();
+</script>
+{%- if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ p.name | jsonify }},
+  "jobTitle": {{ p.role | jsonify }},
+  "worksFor": { "@type": "Organization", "name": {{ p.company | jsonify }} },
+  "alumniOf": [
+    {%- for e in site.data.education %}
+    { "@type": "CollegeOrUniversity", "name": {{ e.school | jsonify }} }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ],
+  "address": { "@type": "PostalAddress", "addressLocality": "Toronto", "addressRegion": "ON", "addressCountry": "CA" },
+  "email": {{ p.email | prepend: "mailto:" | jsonify }},
+  "url": {{ '/' | absolute_url | jsonify }},
+  "image": {{ p.photo | absolute_url | jsonify }},
+  "sameAs": [
+    {%- assign profiles = p.links | where_exp: "l", "l.url contains 'https://'" -%}
+    {%- for l in profiles %}
+    {{ l.url | jsonify }}{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ],
+  "knowsAbout": ["Cloud infrastructure", "Infrastructure as code", "Terraform", "Amazon Web Services", "Google Cloud", "Microsoft Azure", "Distributed systems", "Apache Spark", "Agentic AI", "Python", "Java", "Kubernetes"]
+}
+</script>
+{%- endif %}

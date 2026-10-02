@@ -1,0 +1,41 @@
+# Awards, hackathons and competitions. tone: gold (win), blue (ranking), green (placing).
+
+- result: Winner
+  title: Hackers' Choice Award
+  event: AMEA Regional Hackathon
+  year: "2026"
+  detail: Built PagerBuddy, an agentic-AI incident-response assistant.
+  tone: gold
+
+- result: Winner
+  title: Cyber Security Fortress Award
+  event: International cybersecurity award
+  year: "2024"
+  detail: An international award contested among the tech giants.
+  tone: gold
+
+- result: Winner · 1st of 40+ teams
+  title: TD TechJam
+  event: Hackathon, North America region
+  year: "2023"
+  detail: Top team across North America; the winning solution was showcased at TechCon ’24.
+  tone: gold
+
+- result: Top 5% worldwide
+  title: Facebook Hacker Cup
+  event: Global programming competition
+  detail: 16th in Canada and 1,738th worldwide among 34,000+ competitors.
+  tone: blue
+
+- result: Runner-up · 2nd of 18 teams
+  title: TD Innovation Challenge
+  event: Innovation hackathon
+  detail: Second place in a field of 18 teams.
+  tone: green
+
+- result: 500+ problems solved
+  title: Competitive programming
+  event: LeetCode · Codeforces · Kick Start · Code Jam
+  detail: Data structures and algorithms practice, mostly in C++, with contest solutions published on GitHub.
+  tone: blue
+  url: https://github.com/11fenil11/Competitive-Programming

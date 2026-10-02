@@ -1,0 +1,5 @@
+# For local previews only; GitHub Pages uses its own pinned versions of the same gems.
+source "https://rubygems.org"
+
+gem "github-pages", group: :jekyll_plugins
+gem "webrick"
